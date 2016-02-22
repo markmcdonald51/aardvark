@@ -1,0 +1,8 @@
+sequel_films:
+  endpoint: http://data.linkedmdb.org/sparql
+battles:
+  endpoint: http://localhost:3030/dbpedia/sparql
+count_battles:
+  endpoint: http://dbpedia.org/sparql
+parents:
+  endpoint: http://dbpedia.org/sparql

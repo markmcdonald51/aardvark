@@ -1,0 +1,9 @@
+PREFIX : <http://data.linkedmdb.org/resource/movie/>
+PREFIX dc: <http://purl.org/dc/terms/>
+SELECT ?movieName
+  WHERE {
+    ?arnie :actor_name "<%= options[:name] %>".
+    ?movie      :actor ?arnie;
+                dc:title ?movieName ;
+                :sequel  ?sequel .
+  }
