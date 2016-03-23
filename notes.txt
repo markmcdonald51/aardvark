@@ -1,0 +1,11 @@
+prefix wdp: <https://www.wikidata.org/wiki/Property:>
+
+select ?person ?name ?birthDate ?birthPlace
+where
+{
+  <<%= resource %>> wdp:<%= relation %> ?person .
+  optional { ?person dbp:name ?name ;
+          dbo:birthDate ?birthDate ;
+          dbp:birthPlace ?birthPlace } .
+}
+

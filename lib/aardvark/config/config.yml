@@ -5,4 +5,10 @@ battles:
 count_battles:
   endpoint: http://dbpedia.org/sparql
 parents:
-  endpoint: http://dbpedia.org/sparql
+  endpoint: http://localhost:3030/dbpedia/sparql
+mother:
+  endpoint: http://localhost:3030/dbpedia/sparql
+father:
+  endpoint: http://localhost:3030/dbpedia/sparql
+properties:
+  endpoint: http://localhost:3030/dbpedia/sparql

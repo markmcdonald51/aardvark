@@ -2,12 +2,13 @@ prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix yago: <http://dbpedia.org/class/yago/>
 prefix dbo: <http://dbpedia.org/ontology/>
 prefix dbp: <http://dbpedia.org/property/>
+prefix dbr: <http://dbpedia.org/resource/>
 
-select ?person ?name ?birthDate ?birthPlace
+select ?person ?name
 where
 {
-  <<%= resource %>> dbo:parent ?person .
-  ?person dbp:name ?name ;
-          dbo:birthDate ?birthDate ;
-          dbp:birthPlace ?birthPlace 
+  <http://dbpedia.org/resource/<%= @person %>> <<%= relationship %>> ?person
+  optional {
+    ?person dbp:name ?name
+  }
 }

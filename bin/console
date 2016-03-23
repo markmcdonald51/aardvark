@@ -11,7 +11,9 @@ require "aardvark"
 # Pry.start
 
 require "pry"
-Pry.start
+include Aardvark
+# ActiveRecord::Base.logger = Logger.new(STDOUT)
 
+Pry.start
 
 # e.g. Aardvark.family_tree(name: "John Parkins")

@@ -1,0 +1,35 @@
+
+
+
+#prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+#prefix owl: <http://www.w3.org/2002/07/owl#>
+#prefix yago: <http://dbpedia.org/class/yago/>
+#prefix dbo: <http://dbpedia.org/ontology/>
+#prefix dbp: <http://dbpedia.org/property/>
+#PREFIX wd: <http://wikidata.org/entity/> 
+#
+#select ?person ?name ?birthDate ?birthPlace
+#where
+#{
+#  ?person owl:sameAs wd:<%= resource %> ;
+#          dbo:birthDate ?birthDate ;
+#          dbp:birthPlace ?birthPlace 
+#}
+#
+#
+#
+#
+#PREFIX wd: <http://www.wikidata.org/entity/> 
+#PREFIX sc: <http://schema.org/>
+#
+#SELECT  ?id ?personb ?sex
+#WHERE
+#{
+#	      wd:<%= resource %> wd:<%= relation %>s ?code .
+#        ?code wd:<%= relation %>v ?id .
+#        
+#	      ?id wd:P21s ?sex_code .
+#        ?sex_code wd:P21v ?sex .
+#        
+#        optional {  ?personb sc:about ?id . }
+#}

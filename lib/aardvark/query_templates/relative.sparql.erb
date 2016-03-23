@@ -1,0 +1,14 @@
+PREFIX wd: <http://www.wikidata.org/entity/> 
+PREFIX sc: <http://schema.org/>
+
+SELECT  ?id ?personb ?sex
+WHERE
+{
+	      wd:<%= resource %> wd:<%= relation %>s ?code .
+        ?code wd:<%= relation %>v ?id .
+        
+	      ?id wd:P21s ?sex_code .
+        ?sex_code wd:P21v ?sex .
+        
+        optional {  ?personb sc:about ?id . }
+}

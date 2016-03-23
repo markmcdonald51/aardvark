@@ -1,0 +1,8 @@
+prefix dbo: <http://dbpedia.org/ontology/>
+prefix dbp: <http://dbpedia.org/property/>
+
+select ?person 
+where
+{
+  <<%= resource %>> <%= relation %> ?person
+}

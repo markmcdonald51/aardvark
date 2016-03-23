@@ -1,0 +1,20 @@
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix yago: <http://dbpedia.org/class/yago/>
+prefix dbo: <http://dbpedia.org/ontology/>
+prefix dbp: <http://dbpedia.org/property/>
+PREFIX wd: <http://wikidata.org/entity/> 
+prefix geo: <http://www.georss.org/georss/>
+
+select ?person ?name ?birthDate ?birthPlace ?coords ?otherBirthDate
+where
+{
+  ?person owl:sameAs wd:<%= resource %> .    
+  
+  optional {
+    ?person dbo:birthDate ?birthDate .
+    ?person dbp:birthDate ?otherBirthDate .
+    ?person dbp:birthPlace ?birthPlace .
+    ?birthPlace geo:point ?coords
+  }
+}

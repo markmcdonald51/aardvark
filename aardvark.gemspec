@@ -30,8 +30,11 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 1.11"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "pry"
+  spec.add_development_dependency "foreman"
   
   spec.add_runtime_dependency "sparql-client"
   spec.add_runtime_dependency "rdf-raptor"
-  spec.add_runtime_dependency "active-record"
+  spec.add_runtime_dependency "activerecord"
+  spec.add_runtime_dependency "ancestry"
+  spec.add_runtime_dependency "pg"
 end

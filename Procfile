@@ -1,0 +1,2 @@
+wikidata: fuseki --port=3030 --hdt=/Users/hosmer_angel/code/semantic-web/datasets/wikidata-2014-05-26.hdt /wikidata
+dbpedia: fuseki --port=3031 --hdt=/Users/hosmer_angel/code/semantic-web/datasets/dbpedia2015.hdt /dbpedia
