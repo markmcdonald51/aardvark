@@ -1,0 +1,25 @@
+# arnie: Q2685
+# governor of california: Q887010
+
+arnie properties:
+select ?p ?o
+where { dbr:Arnold_Schwarzenegger ?p ?o }
+
+select ?s ?p ?o
+where { ?s ?p dbr:Governor_of_California }
+
+#governors
+select ?s ?p ?o
+where { ?s rdf:type yago:Governor110140314 }
+
+select ?s ?p ?o
+where { ?s rdf:type yago:Wrestler110793168;
+                  rdf:type yago:Governor110140314
+}
+
+select ?s ?p ?person
+where { ?s dbo:starring ?person .
+              ?person rdf:type yago:Governor110140314
+}
+
+select 
